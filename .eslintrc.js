@@ -14,7 +14,7 @@ module.exports = {
     'no-dupe-keys': 'warn',
     'no-dupe-args': 'warn',
     'no-duplicate-case': 'warn',
-    'no-empty': 'warn',
+    //'no-empty': 'warn',
     'no-extra-semi': 'warn',
     'no-func-assign': 'warn',
     'no-obj-calls': 'warn',
@@ -27,9 +27,9 @@ module.exports = {
     'no-unused-expressions': 'warn',
     'no-shadow-restricted-names': 'warn',
     'no-undefined': 'off',
-    'camelcase': 'warn',
+    //'camelcase': 'warn',
 
-    'indent': ['warn', 2, {
+    'indent': ['warn', 4, {
       // continuation indent
       MemberExpression: 'off',
     }],
@@ -40,7 +40,7 @@ module.exports = {
     'computed-property-spacing': 'warn',
     'func-call-spacing': 'warn',
     'key-spacing': 'warn',
-    'keyword-spacing': 'warn',
+    //'keyword-spacing': 'warn',
     'new-cap': 'warn',
     'no-mixed-spaces-and-tabs': 'warn',
     'one-var': ['warn', {
