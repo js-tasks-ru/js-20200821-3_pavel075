@@ -6,7 +6,6 @@
  */
 
 export function sortStrings(arr, param = 'asc') {
-
     if(Array.isArray(arr) && arr.length) {
         const tmpArr = arr.sort((a, b) => {
             if(param === 'asc') {
