@@ -6,7 +6,6 @@
  */
 
 export function sortStrings(arr, param = 'asc') {
-
     const tmpArr = arr.sort((a, b) => {
         if(param === 'asc') {
             return a.localeCompare(b, {}, {caseFirst: 'upper'});
@@ -14,6 +13,5 @@ export function sortStrings(arr, param = 'asc') {
             return !a.localeCompare(b) ? a.localeCompare(b, {}, {caseFirst: 'upper'}) : -(a.localeCompare(b, {}, {caseFirst: 'upper'}));
         }
     });
-
     return tmpArr.slice();
 }
