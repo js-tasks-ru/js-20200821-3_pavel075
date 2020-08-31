@@ -9,7 +9,7 @@ export function createGetter(path) {
     function getter(obj) { 
         let prop = pathArr.shift();
         
-        if (prop in obj) {
+        if (prop in obj && obj.hasOwnProperty(prop)) {
             if (typeof obj[prop] === "object") {
                 return getter(obj[prop]);
             } else {

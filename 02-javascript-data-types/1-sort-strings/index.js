@@ -16,7 +16,7 @@ export function sortStrings(arr, param = 'asc') {
     }
 
     function compare(arr, num) {
-        let [...arrTmp] = arr;
+        let arrTmp = [...arr];
         return arrTmp.sort((a, b) => num * a.localeCompare(b, {}, {caseFirst: 'upper'}));
     }
 }
