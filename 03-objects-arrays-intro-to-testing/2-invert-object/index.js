@@ -16,5 +16,5 @@ export function invertObj(obj) {
         return newObj;
     }
 
-    return obj;
+    return;
 }
