@@ -16,7 +16,7 @@ export function createGetter(path) {
                 return obj[prop];
             }
         } else {
-            return undefined;
+            return obj[prop];
         }
     }
 

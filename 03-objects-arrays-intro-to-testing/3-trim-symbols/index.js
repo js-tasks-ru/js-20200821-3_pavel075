@@ -5,7 +5,6 @@
  * @returns {string} - the new string without extra symbols according passed size
  */
 export function trimSymbols(string, size) {
-
     switch(size) {
         case 0:
             return "";
@@ -19,23 +18,24 @@ export function trimSymbols(string, size) {
 
     function trim(str, size) {
         if(str) {
-            /*let arr = str.split("");
-            const [...copyArr] = arr;
-            const [...uniqArr] = new Set(arr);
+            let arr = str.split("");
+            const copyTmp = [...arr];
+            const uniqArr = [...new Set(arr)];
 
             uniqArr.forEach((copy) => {
                 let count = 0;
-                for (const [index, value] of copyArr.entries()) {
+                for (const [index, value] of copyTmp.entries()) {
                     if(copy === value) {
                         count++;
                         if(count > size) {
-                            str.slice(index, 1);
+                            arr[index] = "0";
                         }
+                       
                     }
                 }
             });
-            console.log(arr.join(""));
-            return arr.join("");*/
+
+            return arr.filter((e) => e !== "0").join("");
         }
 
         return "";

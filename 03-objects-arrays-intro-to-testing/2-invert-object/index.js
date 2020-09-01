@@ -5,10 +5,16 @@
  */
 export function invertObj(obj) {
     if (typeof obj === "object") {
-        const [...arr] = Object.entries(obj);
+        const arr = Object.entries(obj);
         const result = arr.map(([key, value]) => [key, value].reverse());
-        return Object.fromEntries(result);
+        const newObj = {};
+
+        for (const [key, value] of result) {
+            newObj[key] = value;
+        }
+
+        return newObj;
     }
 
-    return undefined;
+    return obj;
 }
